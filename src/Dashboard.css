@@ -1,0 +1,630 @@
+/* =========================
+   DASHBOARD PAGE
+========================= */
+
+.dashboard-page {
+  min-height: 100vh;
+  padding: 36px;
+  box-sizing: border-box;
+
+  background: linear-gradient(135deg, #f4f7fb 0%, #eaf1ff 100%);
+
+  font-family: Arial, sans-serif;
+  color: #0f172a;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 28px 32px;
+  margin-bottom: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+
+/* Title Area */
+
+.dashboard-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+/* Logo */
+
+.dashboard-logo {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  color: #ffffff;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+/* Main Heading */
+
+.dashboard-header h1 {
+  margin: 0;
+
+  font-size: 27px;
+  font-weight: 750;
+
+  letter-spacing: -0.5px;
+
+  color: #172554;
+}
+
+
+/* Subtitle */
+
+.dashboard-header p {
+  margin: 7px 0 0;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #64748b;
+}
+
+
+/* Welcome Box */
+
+.welcome-box {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 4px;
+
+  padding: 12px 18px;
+
+  background: #eff6ff;
+
+  border: 1px solid #dbeafe;
+
+  border-radius: 12px;
+}
+
+
+.welcome-small {
+  font-size: 11px;
+
+  color: #64748b;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+
+.welcome-name {
+  font-size: 16px;
+
+  color: #1d4ed8;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.overview-section,
+.quick-actions {
+  margin-bottom: 30px;
+}
+
+
+.section-heading {
+  margin-bottom: 17px;
+}
+
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size: 21px;
+
+  font-weight: 750;
+
+  color: #1e293b;
+}
+
+
+.section-heading p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+
+  color: #64748b;
+}
+
+
+/* =========================
+   OVERVIEW CARDS
+========================= */
+
+.overview-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+.overview-card {
+  position: relative;
+
+  min-height: 170px;
+
+  padding: 22px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 17px;
+
+  box-shadow: 0 7px 25px rgba(15, 23, 42, 0.06);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.overview-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+}
+
+
+/* Top Area */
+
+.card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 17px;
+}
+
+
+/* Card Icon */
+
+.card-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #eff6ff;
+
+  font-size: 20px;
+}
+
+
+/* Card Label */
+
+.card-label {
+  font-size: 10px;
+
+  font-weight: 750;
+
+  letter-spacing: 0.8px;
+
+  color: #94a3b8;
+}
+
+
+/* Card Heading */
+
+.overview-card h3 {
+  margin: 0;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #64748b;
+}
+
+
+/* Card Value */
+
+.card-value {
+  margin: 7px 0 0;
+
+  font-size: 28px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  color: #0f172a;
+
+  letter-spacing: -0.5px;
+}
+
+
+.card-value.money {
+  font-size: 25px;
+}
+
+
+/* Bottom Text */
+
+.card-bottom {
+  display: block;
+
+  margin-top: 9px;
+
+  font-size: 11px;
+
+  color: #94a3b8;
+}
+
+
+/* =========================
+   CARD VARIATIONS
+========================= */
+
+.customer-card::before,
+.loan-card::before,
+.payment-card::before,
+.amount-card::before,
+.balance-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background: #2563eb;
+}
+
+
+.loan-card .card-icon {
+  background: #ecfdf5;
+}
+
+
+.payment-card .card-icon {
+  background: #fef3c7;
+}
+
+
+.amount-card .card-icon {
+  background: #f3e8ff;
+}
+
+
+.balance-card .card-icon {
+  background: #fff1f2;
+}
+
+
+/* =========================
+   QUICK ACTIONS
+========================= */
+
+.quick-actions {
+  padding: 27px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 20px;
+
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+}
+
+
+/* Action Grid */
+
+.action-buttons {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+}
+
+
+/* =========================
+   ACTION BUTTON
+========================= */
+
+.dashboard-action-button {
+  min-height: 82px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 15px 17px;
+
+  box-sizing: border-box;
+
+  background: #f8fbff;
+
+  border: 1px solid #dbe5f1;
+
+  border-radius: 14px;
+
+  color: #1e3a8a;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* Action Icon */
+
+.action-icon {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #eaf2ff;
+
+  font-size: 20px;
+
+  transition: 0.25s ease;
+}
+
+
+/* Action Content */
+
+.action-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  flex: 1;
+}
+
+
+.action-content strong {
+  font-size: 15px;
+
+  color: #1e293b;
+}
+
+
+.action-content span {
+  font-size: 11px;
+
+  color: #64748b;
+}
+
+
+/* Arrow */
+
+.action-arrow {
+  font-size: 22px;
+
+  color: #94a3b8;
+
+  transition: 0.25s ease;
+}
+
+
+/* Hover */
+
+.dashboard-action-button:hover {
+  transform: translateY(-4px);
+
+  background: #2563eb;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.22);
+}
+
+
+.dashboard-action-button:hover .action-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+.dashboard-action-button:hover .action-content strong,
+.dashboard-action-button:hover .action-content span,
+.dashboard-action-button:hover .action-arrow {
+  color: #ffffff;
+}
+
+
+.dashboard-action-button:hover .action-arrow {
+  transform: translateX(4px);
+}
+
+
+/* Click */
+
+.dashboard-action-button:active {
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .dashboard-page {
+    padding: 28px;
+  }
+
+  .overview-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .action-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .dashboard-page {
+    padding: 16px;
+  }
+
+
+  .dashboard-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 22px;
+  }
+
+
+  .dashboard-title {
+    width: 100%;
+  }
+
+
+  .dashboard-logo {
+    width: 48px;
+    height: 48px;
+
+    font-size: 22px;
+  }
+
+
+  .dashboard-header h1 {
+    font-size: 21px;
+  }
+
+
+  .dashboard-header p {
+    font-size: 12px;
+  }
+
+
+  .welcome-box {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    align-items: center;
+  }
+
+
+  .overview-cards {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+
+  .overview-card {
+    min-height: 155px;
+
+    padding: 20px;
+  }
+
+
+  .card-value {
+    font-size: 26px;
+  }
+
+
+  .card-value.money {
+    font-size: 23px;
+  }
+
+
+  .quick-actions {
+    padding: 20px;
+  }
+
+
+  .action-buttons {
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+  }
+
+
+  .dashboard-action-button {
+    min-height: 76px;
+  }
+}

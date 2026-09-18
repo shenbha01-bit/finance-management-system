@@ -1,0 +1,423 @@
+/* =========================
+   CUSTOMERS PAGE
+========================= */
+
+.customers-page {
+  min-height: 100vh;
+  padding: 36px;
+  background: linear-gradient(135deg, #f4f7fb 0%, #eaf1ff 100%);
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.customers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 28px 32px;
+  margin-bottom: 28px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+}
+
+.customers-header h1 {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 750;
+
+  color: #172554;
+}
+
+.customers-header p {
+  margin: 8px 0 0;
+
+  font-size: 14px;
+  color: #64748b;
+}
+
+
+/* =========================
+   ADD CUSTOMER BUTTON
+========================= */
+
+.customers-header button {
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.22);
+
+  transition: 0.25s ease;
+}
+
+.customers-header button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   CUSTOMER FORM
+========================= */
+
+.customer-form {
+  background: #ffffff;
+
+  padding: 28px;
+  margin-bottom: 28px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.07);
+}
+
+.customer-form h2 {
+  margin: 0 0 20px;
+
+  font-size: 20px;
+  color: #1e293b;
+}
+
+.customer-form form {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+}
+
+
+/* =========================
+   INPUT FIELDS
+========================= */
+
+.customer-form input {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  background: #f8fafc;
+
+  /* IMPORTANT:
+     Typed text will be clearly visible */
+  color: #0f172a;
+
+  caret-color: #2563eb;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Placeholder text */
+
+.customer-form input::placeholder {
+  color: #64748b;
+  opacity: 1;
+}
+
+
+/* When typing / selecting input */
+
+.customer-form input:focus {
+  border-color: #2563eb;
+
+  background: #ffffff;
+
+  color: #0f172a;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   FORM BUTTONS
+========================= */
+
+.customer-form form > div {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 4px;
+}
+
+.customer-form form button {
+  padding: 11px 18px;
+
+  border: none;
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+/* Save / Update */
+
+.customer-form form button[type="submit"] {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.customer-form form button[type="submit"]:hover {
+  background: #1d4ed8;
+}
+
+
+/* Cancel */
+
+.customer-form form button[type="button"] {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.customer-form form button[type="button"]:hover {
+  background: #cbd5e1;
+}
+
+
+/* =========================
+   CUSTOMER TABLE SECTION
+========================= */
+
+.customer-table-section {
+  background: #ffffff;
+
+  padding: 28px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.07);
+
+  overflow-x: auto;
+}
+
+.customer-table-section h2 {
+  margin: 0 0 20px;
+
+  font-size: 20px;
+
+  color: #1e293b;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.customer-table-section table {
+  width: 100%;
+
+  min-width: 850px;
+
+  border-collapse: collapse;
+}
+
+.customer-table-section th {
+  padding: 14px 12px;
+
+  text-align: left;
+
+  background: #f1f5f9;
+
+  color: #475569;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.customer-table-section td {
+  padding: 15px 12px;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  border-bottom: 1px solid #eef2f7;
+}
+
+.customer-table-section tbody tr {
+  transition: 0.2s ease;
+}
+
+.customer-table-section tbody tr:hover {
+  background: #f8fbff;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.customer-table-section td:nth-child(7) {
+  font-weight: 650;
+  color: #15803d;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.customer-table-section td:last-child {
+  white-space: nowrap;
+}
+
+.customer-table-section td:last-child button {
+  padding: 7px 11px;
+
+  margin-right: 6px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+/* Edit */
+
+.customer-table-section td:last-child button:first-child {
+  background: #dbeafe;
+
+  color: #1d4ed8;
+}
+
+.customer-table-section td:last-child button:first-child:hover {
+  background: #2563eb;
+
+  color: #ffffff;
+}
+
+
+/* Delete */
+
+.customer-table-section td:last-child button:last-child {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+.customer-table-section td:last-child button:last-child:hover {
+  background: #dc2626;
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   NO CUSTOMER MESSAGE
+========================= */
+
+.customer-table-section > p {
+  padding: 30px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  background: #f8fafc;
+
+  border-radius: 10px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .customers-page {
+    padding: 25px;
+  }
+
+  .customer-form form {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .customers-page {
+    padding: 16px;
+  }
+
+  .customers-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 22px;
+  }
+
+  .customers-header button {
+    width: 100%;
+  }
+
+  .customer-form {
+    padding: 20px;
+  }
+
+  .customer-table-section {
+    padding: 18px;
+  }
+
+}

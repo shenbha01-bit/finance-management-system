@@ -1,0 +1,12 @@
+POST http://localhost:5000/api/customers
+###
+GET http://localhost:5000/api/customers
+Content-Type: application/json
+
+{
+  "name": "Test Customer",
+  "phone": "9876543210",
+  "address": "Coimbatore",
+  "loanAmount": 10000,
+  "paidAmount": 2000
+}

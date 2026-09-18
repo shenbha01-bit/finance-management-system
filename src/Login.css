@@ -1,0 +1,327 @@
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(circle at top left, #dbeafe 0%, transparent 35%),
+    radial-gradient(circle at bottom right, #e0e7ff 0%, transparent 35%),
+    linear-gradient(135deg, #f4f7fb, #eaf1ff);
+
+  font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   LOGIN BOX
+========================= */
+
+.login-box {
+  width: 400px;
+  max-width: 100%;
+
+  padding: 38px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.12);
+
+  text-align: center;
+}
+
+
+/* =========================
+   LOGIN LOGO
+========================= */
+
+.login-box::before {
+  content: "₹";
+
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  color: #ffffff;
+
+  font-size: 27px;
+  font-weight: 800;
+
+  box-shadow:
+    0 9px 22px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.login-box h1 {
+  margin: 0;
+
+  color: #172554;
+
+  font-size: 27px;
+
+  font-weight: 750;
+
+  letter-spacing: -0.4px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.login-box p {
+  margin: 9px 0 25px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.login-box form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.login-box input {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #f8fafc;
+
+  color: #0f172a;
+
+  font-size: 14px;
+
+  caret-color: #2563eb;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Placeholder */
+
+.login-box input::placeholder {
+  color: #64748b;
+
+  opacity: 1;
+}
+
+
+/* Focus */
+
+.login-box input:focus {
+  border-color: #2563eb;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-box form button {
+  width: 100%;
+
+  padding: 13px;
+
+  margin-top: 3px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 18px rgba(37, 99, 235, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.login-box form button:hover {
+  transform: translateY(-2px);
+
+  background: linear-gradient(
+    135deg,
+    #1d4ed8,
+    #1e40af
+  );
+
+  box-shadow:
+    0 10px 23px rgba(37, 99, 235, 0.28);
+}
+
+
+.login-box form button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.login-error {
+  margin: 0 !important;
+
+  padding: 9px 12px;
+
+  border-radius: 8px;
+
+  background: #fef2f2;
+
+  border: 1px solid #fecaca;
+
+  color: #dc2626 !important;
+
+  font-size: 13px !important;
+
+  text-align: left;
+}
+
+
+/* =========================
+   CREATE ACCOUNT
+========================= */
+
+.create-account-btn {
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 12px 13px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  color: #1e3a8a;
+
+  font-size: 14px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.create-account-btn:hover {
+  background: #eff6ff;
+
+  border-color: #93c5fd;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .login-page {
+    padding: 16px;
+  }
+
+  .login-box {
+    width: 100%;
+
+    padding: 28px 22px;
+
+    border-radius: 18px;
+  }
+
+  .login-box h1 {
+    font-size: 23px;
+  }
+
+  .login-box::before {
+    width: 52px;
+    height: 52px;
+
+    font-size: 24px;
+  }
+}

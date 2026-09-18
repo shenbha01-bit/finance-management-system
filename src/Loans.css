@@ -1,0 +1,152 @@
+.loans-page {
+  min-height: 100vh;
+  padding: 35px 40px;
+  background: #f5f7fb;
+  box-sizing: border-box;
+}
+
+.loans-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.loans-header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #1e293b;
+}
+
+.loans-header p {
+  margin: 8px 0 0;
+  color: #64748b;
+}
+
+.add-loan-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-loan-btn:hover {
+  background: #1d4ed8;
+}
+
+.loan-form-card {
+  max-width: 950px;
+  margin: 0 auto 30px;
+  padding: 30px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.loan-form-card h2 {
+  margin: 0 0 25px;
+  color: #1e293b;
+}
+
+.loan-form-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.loan-form-row > div {
+  flex: 1;
+}
+
+.loan-form-row label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.loan-form-row input {
+  width: 100%;
+  height: 45px;
+  padding: 0 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.loan-form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.save-loan-btn,
+.cancel-loan-btn {
+  min-width: 130px;
+  height: 43px;
+  border: none;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-loan-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.cancel-loan-btn {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.loan-table-card {
+  width: 100%;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.loan-table-card table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.loan-table-card th {
+  padding: 17px;
+  background: #f8fafc;
+  text-align: left;
+  color: #334155;
+}
+
+.loan-table-card td {
+  padding: 17px;
+  border-bottom: 1px solid #eef2f7;
+  color: #475569;
+}
+.edit-btn {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #eff6ff;
+  color: #2563eb;
+  cursor: pointer;
+  margin-right: 7px;
+}
+
+.delete-btn {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #fef2f2;
+  color: #dc2626;
+  cursor: pointer;
+}

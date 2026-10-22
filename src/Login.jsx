@@ -8,25 +8,27 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
     setError("");
 
     if (!username.trim()) {
-      setError("Incorrect username");
+      setError("Please enter your username");
       return;
     }
 
     if (!password) {
-      setError("Incorrect password");
+      setError("Please enter your password");
       return;
     }
 
+    setLoading(true);
+
     try {
       const response = await fetch(
-        "http://localhost:5000/api/users/login",
+        "https://finance-management-system001.onrender.com/api/users/login",
         {
           method: "POST",
           headers: {
@@ -42,17 +44,19 @@ function Login() {
       const data = await response.json();
 
       if (!response.ok) {
-        setError(data.message || "Login failed");
+        setError(data.message || "Login failed. Please check your details.");
         return;
       }
 
       navigate("/dashboard", {
         state: {
-          username: data.username,
+          username: data.username || username.trim(),
         },
       });
     } catch (error) {
-      setError("Unable to connect to backend");
+      setError("Unable to connect to backend. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -85,7 +89,9 @@ function Login() {
 
           {error && <p className="login-error">{error}</p>}
 
-          <button type="submit">Login</button>
+          <button type="submit" disabled={loading}>
+            {loading ? "Logging in..." : "Login"}
+          </button>
         </form>
 
         <button
